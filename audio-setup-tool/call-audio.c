@@ -78,7 +78,7 @@ static bool audio_restore_state(struct audio_control_state* controls, int n_cont
 	int fd;
 	int ret;
 
-	fd = open("/dev/snd/controlC0", O_CLOEXEC | O_NONBLOCK);
+	fd = open("/dev/snd/by-path/platform-sound", O_CLOEXEC | O_NONBLOCK);
 	if (fd < 0)
 		error("failed to open card\n");
 
